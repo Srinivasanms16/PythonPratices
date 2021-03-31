@@ -12,3 +12,4 @@ def callmultiproc():
     with ProcessPoolExecutor(max_workers=3) as pexecuter:
         for _ in range(10):
             pexecuter.submit(fun1,1)
+        

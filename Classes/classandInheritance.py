@@ -8,12 +8,14 @@ Created on Mon Feb  1 19:47:41 2021
 #import module
 #from module import members
 
-import student as st
+#import student as st
 
-#from student import student
+from student import student
 
 #Inheritating the Class
-class school(st.student):
+class school(student):
+
+    #similar to constructor.
     def __init__(self,std,fname,lname):
         super().__init__(fname,lname)
         self.standard = std

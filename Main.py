@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-# we should always filter the main script when your using Process . because when we exccute some code in process then window 
+# we should always filter the main script when your using Process . because when we exccute some code in Multiprocessing in window 
 # while creating new process it will load the main script . So we add if condition with __name__ == __main 
 #then it will excute only once , when new process are created this code will not execute only code which we want to execute in
 # child process will run.
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         myobj = school("LKG","Nithin","Shivaa")
         myobj.printInfo() 
 
-        print("Biggest number is : "+str(greatestof3(10,20,9)))
+        print(f"Biggest number is :{str(greatestof3(10,20,9))}")
 
         #function returns multiple values.
         sum,diff,mul,div = calculator(10,20)
@@ -57,8 +57,9 @@ if __name__ == "__main__":
         name = input("Enter you name :")
         message = "hello , {0} "
         print(message.format(name))
-    except:
-        print("exception")
+    except Exception as e:
+        #e will have exception message.
+        print(e)
     else:
         print("No issues")
     finally:

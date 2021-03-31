@@ -5,8 +5,8 @@ import mypro
 
 def callmultiThreading():
     with concurrent.futures.ThreadPoolExecutor() as texecuter:
-        for _ in range(10):
-            texecuter.submit(mypro.fun1,1)
+        texecuter.map(callmultiprocessings,range(10))
+            
 
 
 def callmultiprocessings():
